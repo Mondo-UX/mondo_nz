@@ -1,9 +1,15 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+}
 
 export const metadata: Metadata = {
   title: "MONDO Digital - Beautiful Creative Made with Mondo Can-Do",
@@ -14,6 +20,7 @@ export const metadata: Metadata = {
   creator: "MONDO Digital",
   publisher: "MONDO Digital",
   robots: "index, follow",
+  generator: "v0.dev",
   openGraph: {
     type: "website",
     locale: "en_NZ",
@@ -29,8 +36,6 @@ export const metadata: Metadata = {
     description:
       "We craft exceptional digital experiences that push boundaries and redefine what's possible in the digital realm.",
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
